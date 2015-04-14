@@ -1,5 +1,6 @@
 body
-	background: url("../img/switch-winter-bg.jpg") top center no-repeat fixed // SWITCH
+	background: url("img/switch-winter-bg.jpg") top center no-repeat fixed // SWITCH
+	background-size: cover
 .container
 	+container-fixed
 	@media (min-width: $screen-sm-min)
@@ -44,3 +45,7 @@ body
 			&:last-child:after
 				// content: ""	
 				color: $red
+.wrap
+	@extend .container
+	background-color: $gray-main
+	padding: 0px		

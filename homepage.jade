@@ -1,22 +1,21 @@
 extend jade.resources/layout/master
 block content
-	.home-slider
-		.owl-carousel
-			.item
-				img(src='http://placehold.it/1920x400/FAFAFA/000000' class='img-responsive')
-			.item
-				img(src='http://placehold.it/1920x400/FF00FF/FFFFFF' class='img-responsive')
-			.item
-				img(src='http://placehold.it/1920x400/FF00FF/FFFFFF' class='img-responsive')
-			.item
-				img(src='http://placehold.it/1920x400/FF00FF/FFFFFF' class='img-responsive')
-			.item
-				img(src='http://placehold.it/1920x400/FF00FF/FFFFFF' class='img-responsive')
-	.container				
+	.wrap
+		.home-slider
+			.owl-carousel
+				.item
+					img(src='http://placehold.it/1920x400/FAFAFA/000000' class='img-responsive')
+				.item
+					img(src='http://placehold.it/1920x400/FF00FF/FFFFFF' class='img-responsive')
+				.item
+					img(src='http://placehold.it/1920x400/FF00FF/FFFFFF' class='img-responsive')
+				.item
+					img(src='http://placehold.it/1920x400/FF00FF/FFFFFF' class='img-responsive')
+				.item
+					img(src='http://placehold.it/1920x400/FF00FF/FFFFFF' class='img-responsive')
 		.featured-list
 			.product-list
 				+product-list(6)
-	.container
 		.home-boxes
 			.wide.test
 				+contentBox('banner', '370x370')
@@ -26,7 +25,6 @@ block content
 				+contentBox('banner', '175x370')
 			.narrow.test3
 				+contentBox('banner', '175x370')
-	.container				
 		.newin-list
 			.product-list
 				+product-list(6)			
