@@ -2,15 +2,19 @@
 	// border-bottom: 2px solid $blue
 	position: relative
 	z-index: 2
-	background-color: $blue
-	+make-row   //SWITCH
+	background-color: #000
+	+make-row   //SWITCH	
 	ul
 		+h-nav
 		position: relative
+		float: left
+		max-width: 75%
 	a
-		+nav-level-1($blue,#fff,$red,#fff)
+		+nav-level-1(#000,#fff,$red,#fff)
 		font-weight: 400
 		text-transform: uppercase
+		font-size: 0.9em
+		font-weight: 700
 		// &.active 
 		// 	color: #000
 	.dropdown		
@@ -21,7 +25,8 @@
 			margin-left: 0.5em	
 	.dropdown:hover
 		.dropdown-menu
-			display: inline-block		
+			display: inline-block	
+			width: 100%	
 	.dropdown-menu
 		display: none
 		+v-nav
@@ -32,6 +37,9 @@
 		position: absolute
 		top: 28px
 		left: 0
+		li 
+			float: left
+			width: 20%
 		.level-2			
 			a
 				+nav-level-2(transparent, $accent, transparent, $accent)

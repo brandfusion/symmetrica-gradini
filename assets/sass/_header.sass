@@ -1,25 +1,46 @@
-.header
-	+make-row
+.header	
 	+clearfix
 	margin-bottom: 1em	
 	font-size: 0.8em
 	.top
+		+clearfix
 		display: block
 		background-color: #000
 		color: #fff		
-		padding: 0px 10px
-		text-align: center
+		padding: 0px $spacing
+		text-align: left
 		line-height: 2em
-		@media (min-width: 768px)
+		margin-bottom: $spacing
+		p 
+			display: inline-block
+			margin: 0
+			margin-right: 1.5em
+		.fa 
+			display: inline-block 
+			margin-right: 0.5em	
+		ul			
+			+h-nav
 			display: none
+			float: right
+			@media (min-width: 768px)
+				display: block
+			a
+				padding: 0 0.5em
+				margin: 0
+				color: #fff
+				&:hover
+					color: darken(adjust_hue($accent, 136), 11)
+			li:last-child
+				a
+					padding-right: 0		
 	.upper		
+		+make-row
 		position: relative		
 		margin-bottom: $spacing	
-		color: #aaa		
-		height: 52px
+		color: #fff			
 		padding: 0px $spacing
-		@media (min-width: 768px)
-			background-color: #000
+		min-height: 70px
+		@media (min-width: 768px)		
 			padding: 0px
 		a
 			margin: 0
@@ -37,14 +58,12 @@
 			+clearfix			
 			+make-sm-column(9)
 			+make-xs-column(6)		
-			@media (min-width: 768px)
-				background-color: #000
+			@media (min-width: 768px)			
 				width: 100%
 				padding: 0px
 				padding-left: 220px
-		.header-item		
-			padding-top: $spacing
-			height: 52px
+		.header-item
+			padding-top: $spacing			
 		.header-phone, .header-delivery
 			display: none
 			+make-sm-column(4)			
@@ -55,9 +74,13 @@
 				float: left
 				margin-right: 5px 
 			p 
-				float: left
-				display: block
-				margin-bottom: 0px	
+				// float: left
+				display: inline-block
+				margin-bottom: 0px
+			.fa 
+				vertical-align: top
+				font-size: 2em
+				margin: 0.2em 0.5em 0		
 		.header-login
 			+make-sm-column(2)	
 			+make-xs-column(6)
@@ -66,26 +89,14 @@
 			+make-xs-column(6)
 			padding-top: 0px
 			background-color: $red
-			float: right							
+			float: right
+			a 
+				color: #fff				
 	.middle
 		+make-sm-column(12)
 		+clearfix		
 		padding-right: 0
-		ul			
-			+h-nav
-			display: none
-			float: right
-			@media (min-width: 768px)
-				display: block
-			a
-				padding: 0 0.5em
-				margin: 0.5em 0
-				color: #000
-				&:hover
-					color: darken(adjust_hue($accent, 136), 11)
-			li:last-child
-				a
-					padding-right: 0			
+				
 	.lower
 		+make-sm-column(9)
 		+clearfix
@@ -98,21 +109,39 @@
 			line-height: 2em
 			span
 				color: $accent
-		.search
-			float: right
-			form 
-				+default-input
-			input
-				+default-input
-				border-top: none
-				border-left: none
-				border-right: none
-			button
-				outline: none
-				background-color: #fff
-				border: none
-				color: $accent
-				font-size: 1.2em
+.header-search
+	float: right
+	max-width: 25%	
+	form 
+		+default-input
+	input
+		+default-input	
+		font-size: 0.8em	
+		border: none
+		box-sizing: border-box	  
+		outline: none
+		display: inline-block
+		margin: 0px
+		margin-right: -4px
+		padding: 0px
+		vertical-align: top
+		line-height: 28px 
+		padding: 0 0.5em
+		+transition(all 0.2s ease-in)
+		width: 10em
+		&:focus			
+			width: 15em
+	button
+		outline: none
+		background-color: #fff
+		border: none
+		color: #000
+		font-size: 1.2em
+		&:hover
+			background-color: #fff
+			color: $accent
+
+
 	
 	
 	
