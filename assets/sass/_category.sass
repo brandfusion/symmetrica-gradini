@@ -9,7 +9,7 @@
 		font-size: 1.6em
 		text-transform: uppercase
 		// border-bottom: 1px solid #000
-		background-color: $red
+		background-color: $blue
 		color: #fff
 		&:after
 			content: "//"
@@ -53,7 +53,7 @@
 		padding-bottom: 1em	
 .filter-vertical			
 	.filter-item
-		font-size: 0.8em
+		font-size: 0.7em
 		margin-bottom: 1em
 		a		
 			color: #000	
@@ -62,12 +62,22 @@
 		.filter-title	
 			margin-bottom: 0
 			font-weight: 600
+			font-size: 1.2em
 			&:before
 				font-family: "FontAwesome"
 				content: "\f105"
 				margin-right: 0.2em
-				color: $red
+				color: $blue
 				font-weight: 400
+	.filter-wrap
+		padding: 0 1em
+		border-left: 1px solid $blue
+		overflow: auto
+		max-height: 20em			
+	label
+		margin-bottom: 0.5em
+	input 
+		vertical-align: middle
 .cancel-filters
 	font-size: 0.8em	
 	font-weight: 300
@@ -153,7 +163,7 @@
 		display: inline-block
 		float: right
 		select
-			border: 1px solid #000
+			border: 1px solid #ddd
 			outline: none
 			color: #000
 .pagination
