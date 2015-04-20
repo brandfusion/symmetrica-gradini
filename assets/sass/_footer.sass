@@ -1,0 +1,31 @@
+.footer
+	.upper
+		+make-row
+		background-color: #298492
+		background-color: darken($blue, 10%)
+		color: #fff 		
+		font-size: 0.8em
+		padding: $spacing 0
+		.info
+			+make-sm-column(4)	
+			min-height: 5em		
+			*
+				padding-left: 3.3em
+			*:first-child
+				padding-top: 0.5em	
+			p 
+				margin-bottom: 0	
+			&:before
+				font-family: "FontAwesome"
+				content: "\f095"
+				font-size: 3em
+				float: left
+				color: lighten($blue, 20%)
+		.location
+			@extend .info			
+			&:before				
+				content: "\f041"				
+		.opened
+			@extend .info		
+			&:before				
+				content: "\f017"
