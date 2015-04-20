@@ -6,37 +6,86 @@
 		padding: 0
 		padding-top: $spacing
 	.product-image
-		+make-sm-column(7)		
+		+make-sm-column(7)	
 		.thumbnails
 			+make-sm-column(2)
 			+make-md-column(12)
-			+make-lg-column(2)			
+			+make-lg-column(2)		
+			.thumbs  //?!?
+				+clearfix	
 			padding: 0
 			a
 				border: 1px solid #eee
+				display: block
+				background-color: #fff
+			img 
+				max-width: 100%
+				margin: 0 auto	
 			@media (min-width: $screen-md-min)
 				float: left
-			@media (max-width: $screen-lg-min)
+				padding-right: 0px
 				ul
 					+h-nav					
 				li 
 					width: 15%
-					margin-right: $spacing
+				a 
+					margin-right: $spacing	
+					float: left
+					width: 15%
+			@media (min-width: $screen-lg-min)
+				padding-right: $spacing
+				ul 
+					+v-nav	
+				li 
+					width: 100%
+				a 
+					margin-bottom: $spacing
+					float: none
+					width: 100%
 		.main-image
 			+make-sm-column(10)
 			+make-md-column(12)
 			+make-lg-column(10)
-			padding-right: 0
+			position: relative
+			// padding-right: 0
 			margin-bottom: $spacing
-			// img 
-			// 	box-shadow: 0px 0px 6px #ddd
-			// 	border: 1px solid #00bed4	
+			background-color: #fff
+			img 
+				margin: 0 auto
+				max-width: 100%
+				// box-shadow: 0px 0px 6px #ddd
+				// border: 1px solid #00bed4	
 			@media (min-width: $screen-md-min)
 				float: right
 			@media (max-width: $screen-lg-min)
 				padding-right: $spacing
 				padding: 0
-					
+			.sale		
+				+transition(all 0.2s ease-in)	
+				background-color: rgba(0,190,212,0.4)			
+				position: absolute
+				top: 10px
+				text-align: left
+				right: 10px
+				color: #fff
+				font-weight: 700
+				padding-left: 0.7em
+				font-size: 0.7em			
+				width: 3em
+				height: 3em
+				text-align: center
+				padding-top: 0.8em
+				padding-left: 0
+				border-radius: 3em	
+				background-color: rgba(0,190,212,1)	
+				box-shadow: 0px 0px 0px 4px rgba(0,190,212,0.2)	
+				z-index: 2
+			.manufacturer
+				position: absolute
+				left: 10px
+				top: 10px	
+				img 
+					max-width: 125px					
 	.product-related-list
 		+make-sm-column(12)
 		+make-md-column(2)
@@ -49,16 +98,24 @@
 		.product-title
 			font-weight: 300
 			color: $blue
+			font-size: 1.7em
 		.product-code
-			color: #ddd
+			color: #aaa
 		.product-info-secondary
 			// padding: 0px 0px $spacing/2
 			border-bottom: 1px solid $blue
-			margin-bottom: $spacing
+			margin: $spacing 0
+			.block 
+				background-color: #fff 
+				border: 1px solid #eee
+				padding: 0.5em
+				margin-bottom: 0.5em
+				p 
+					margin-bottom: 0px
 			.headline
-				font-size: 1em
-				margin-bottom: 0
-				display: none
+				font-size: 0.8em
+				margin-bottom: 0	
+				font-weight: 700			
 			p
 				margin-bottom: 0.5em 
 			a
@@ -74,12 +131,20 @@
 		.price
 			font-size: 2em
 			line-height: 1em
+			font-weight: 600
 			sup
 				font-size: 0.4em
-				top: -1em		
+				top: -1em	
+				font-weight: 400	
 		.old-price
 			text-decoration: line-through
-			color: #ddd	
+			color: $blue
+		.manufacturer-page
+			display: block	
+			font-size: 0.8em
+			font-weight: 400
+			a 
+				font-size: 1em				
 	.variant-select
 		select 
 			font-size: 0.8em	
@@ -150,11 +215,13 @@
 				transform: translate(0px,0px)
 		.tooltip-variant-disabled
 			display: none	
-.extras
-	padding-top: $spacing
+.extras	
+	background-color: #fff
+	padding: 0.5em
+	margin-bottom: $spacing
+	border-bottom: 1px dotted #ddd
 	li
-		max-width: 20%
-		padding-right: $spacing
+		width: 50%		
 	ul
 		+h-nav
 		
@@ -166,8 +233,26 @@
 		span
 			font-weight: 600	
 	a
-		color: #000
-		text-decoration: underline				
+		color: #000	
+		font-size: 0.7em
+		width: 100%
+		display: block	
+		font-weight: 700
+		margin-bottom: 0	 
+		text-transform: uppercase
+		text-decoration: none	
+		line-height: 1.7em	
+	.fa 
+		color: $red
+		margin-right: 0.5em
+		font-size: 1.2em	
+.phone-support
+	display: block
+	text-align: center
+	a 
+		color: #000	
+		&:hover 
+			color: $red		
 .variant-box
 	ul
 		+h-nav
