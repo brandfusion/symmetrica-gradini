@@ -4,7 +4,7 @@
 		+make-sm-column(10)
 		+clearfix
 		padding: 0
-		padding-top: $spacing
+		// padding-top: $spacing
 	.product-image
 		+make-sm-column(7)	
 		.thumbnails
@@ -379,8 +379,7 @@
 .tab-content
 	padding-top: $spacing	
 	+make-sm-column(12)
-	+clearfix	
-	
+	+clearfix		
 	.product-description
 		padding-top: 4em
 		max-width: 75%
@@ -398,7 +397,6 @@
 			&:nth-of-type(2n+2)
 				margin-right: -4em
 				float: right
-
 .tab-content
 	.tab-pane 
 		display: none
@@ -408,19 +406,38 @@
 		visibility: visible
 .comment-block	
 	+clearfix
+	margin-bottom: 0.2em
 	a
 		display: inline-block
-		color: #000
+		color: #aaa
 		// text-decoration: underline
 		font-size: 0.8em
-		padding: 0 0.5em
+		// padding: 0 0.5em
 		font-style: italic
-	.write-review:after
-		font-family: "FontAwesome"
-		content: "\f0e5"
-		margin-left: 0.5em	
+		&:hover 
+			text-decoration: underline
+	.write-review
+		&:after
+			font-family: "FontAwesome"
+			content: "\f0e5"
+			margin-left: 0.2em	
+			color: $blue
+			margin-right: 0.2em
+		&:hover
+			color: $blue
 	.rating-block
 		+clearfix
 		display: inline-block
+		vertical-align: middle
 		img
-			float: left		
+			float: left
+	.wishlist
+		a 			
+			&:after
+				margin-left: 0.2em
+				font-family: "FontAwesome"
+				content: "\f005"			
+				color: orange
+			&:hover
+				color: orange
+

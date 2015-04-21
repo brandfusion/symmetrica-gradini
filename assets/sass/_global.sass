@@ -48,5 +48,69 @@ body
 	background-color: $gray-main
 	background-color: rgba(250,250,250,0.9)
 	padding: 0px
+	+transition(all 0.2s ease-in)
 .row
 	+make-row			
+
+.modal-open
+	padding-right: 0px
+	overflow-y: scroll
+	.modal		
+		background-color: rgba(255,255,255,0)
+		&.fade
+			background-color: rgba(255,255,255,0.6)
+.modal-content
+	border-radius: 0px 
+	border: 1px solid $blue
+	box-shadow: 0px 0px 3px $blue		
+	font-size: 0.8em
+	a 
+		color: #000
+		&:hover 
+		text-decoration: underline
+	.modal-header
+		+clearfix
+		padding: 0.5em $spacing
+		h6	
+			font-weight: 700
+			color: $blue
+			font-size: 1em			
+		button
+			outline: none
+			border: none
+			color: $red
+			float: right	
+			background-color: #fff
+	select
+		+fancy-input
+		display: block
+		width: 100%
+		max-width: 200px
+		margin-bottom: 0.5em
+	input
+		+fancy-input	
+		display: block	
+		width: 100%
+		max-width: 200px
+		margin-bottom: 0.5em
+	textarea
+		+fancy-input	
+		display: block
+		width: 100%
+		max-width: 100%
+		margin-bottom: 0.5em
+		min-height: 10em
+	.modal-body	
+		padding: $spacing
+		button
+			padding: 0.5em
+			max-width: 200px
+			width: 100%
+			&:before
+				font-family: "FontAwesome"
+				content: "\f0e5"
+				margin-right: 0.5em			
+.blur 
+	-webkit-filter: blur(5px)	
+
+

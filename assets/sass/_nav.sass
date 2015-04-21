@@ -3,7 +3,8 @@
 	position: relative
 	z-index: 2
 	background-color: #000
-	+make-row   //SWITCH	
+	@media (min-width: $screen-sm-min)
+		+make-row   //SWITCH	
 	ul
 		+h-nav
 		position: relative
