@@ -1,7 +1,7 @@
-.product-page
+.product-page	
 	+make-row()
 	.product-item
-		+make-sm-column(10)
+		+make-sm-column(12)
 		+clearfix
 		padding: 0
 		// padding-top: $spacing
@@ -88,8 +88,8 @@
 					max-width: 125px					
 	.product-related-list
 		+make-sm-column(12)
-		+make-md-column(2)
-		+make-lg-column(2)	
+		+make-md-column(12)
+		+make-lg-column(12)	
 	.product-content
 		+make-sm-column(5)		
 		p
@@ -440,4 +440,39 @@
 				color: orange
 			&:hover
 				color: orange
-
+.product-list-simillar
+	+make-xs-column(12)
+	.item
+		+make-xs-column(6)
+		+make-sm-column(4)		
+		+make-md-column(3)
+		+make-lg-column(2)
+.product-list-bought
+	+make-xs-column(12)
+	.item
+		+make-xs-column(6)
+		+make-sm-column(4)		
+		+make-md-column(3)
+		+make-lg-column(2)	
+.product-list-headline
+	color: #000
+	font-size: 0.8em
+	line-height: 2em
+	display: inline-block
+	font-weight: 700
+	text-transform: uppercase	
+	border-bottom: 1px solid $blue	
+	margin-bottom: $spacing
+	width: 100%
+	display: block
+.product-description-wrap
+	+make-xs-column(12)	
+	font-size: 0.8em
+	padding: 5% $spacing
+	max-width: 700px
+	margin: 0 auto
+	background-color: #fff
+	margin-top: 10px
+	a 
+		text-decoration: underline
+		color: #000

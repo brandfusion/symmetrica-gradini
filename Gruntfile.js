@@ -5,7 +5,7 @@ module.exports = function (grunt) {
                 files: ['**/*.sass'],
                 tasks: ['compass:dev'],
                 options: {
-                  spawn: false,
+                  spawn: false,                  
                 },
             },        
         },
@@ -16,6 +16,7 @@ module.exports = function (grunt) {
                     cssDir: 'assets/css',
                     imagesPath: 'assets/img',
                     noLineComments: false,
+                    sourcemap: true,
                     outputStyle: 'compressed'
                 }
             }
