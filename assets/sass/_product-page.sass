@@ -95,6 +95,12 @@
 		p
 			margin-bottom: 0
 			font-size: 0.8em
+		.no-product
+			background-color: #ff0049
+			padding: 0.5em
+			color: #fff
+			text-align: center
+			margin-bottom: 10px					
 		.product-title
 			font-weight: 300
 			color: $blue
@@ -468,11 +474,52 @@
 .product-description-wrap
 	+make-xs-column(12)	
 	font-size: 0.8em
-	padding: 5% $spacing
-	max-width: 700px
-	margin: 0 auto
+	padding: 5% $spacing	
 	background-color: #fff
 	margin-top: 10px
 	a 
 		text-decoration: underline
 		color: #000
+	.product-description 
+		max-width: 700px
+		margin: 0 auto
+	h4 
+		font-size: 1.2em
+		font-weight: 700
+		border-bottom: 1px solid $blue
+		margin-bottom: 10px
+		padding-bottom: 0.5em		
+	.reviews
+		max-width: 700px
+		margin: 0 auto		
+		.review-stars 
+			+clearfix
+			margin-right: 0.5em
+			img 
+				float: left
+				margin-right: 0	
+		// blockquote
+		// quotes: "\201C""\201D""\2018""\2019"\
+		.review-rating
+			display: inline-block
+		.review-author 
+			margin-bottom: $spacing
+			display: inline-block
+			vertical-align: top
+		.review-content				 
+			p 
+				display: inline
+			&:before
+				color: #ccc
+				content: "\201C"
+				font-size: 3em
+				line-height: 0.1em
+				margin-right: 0.25em
+				vertical-align: -0.4em
+			&:after
+				color: #ccc
+				content: "\201D"
+				font-size: 3em
+				line-height: 0.1em
+				margin-left: 0.1em
+				vertical-align: -0.6em	
