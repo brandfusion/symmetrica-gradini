@@ -7,9 +7,9 @@
 		+make-row   //SWITCH	
 	ul
 		+h-nav
-		position: relative
+		// position: relative
 		float: left
-		max-width: 75%
+		// max-width: 75%
 	a
 		+nav-level-1(#000,#fff,$red,#fff)
 		font-weight: 400
@@ -18,6 +18,12 @@
 		font-weight: 700
 		// &.active 
 		// 	color: #000
+	a.level-3
+		background-color: #fafafa
+		color: #000
+		width: 100%
+		display: block 
+	
 	.dropdown		
 		a:after
 			font-family: "FontAwesome"
@@ -36,8 +42,17 @@
 		border-bottom: 2px solid $accent
 		min-height: 300px
 		position: absolute
-		top: 28px
+		top: 25px
 		left: 0
+		.M2
+			li 
+				position: relative
+		.M3 
+			display: block
+			li 
+				width: 100%
+				display: block
+				float: none		
 		li 
 			float: left
 			width: 20%
