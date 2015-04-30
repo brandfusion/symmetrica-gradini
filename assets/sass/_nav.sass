@@ -16,14 +16,47 @@
 		text-transform: uppercase
 		font-size: 0.9em
 		font-weight: 700
+		color: #fff
 		// &.active 
 		// 	color: #000
+	a.inpath.level-2
+		background-color: $primary
+			
 	a.level-3
 		background-color: #fafafa
 		color: #000
 		width: 100%
+		font-size: 0.7em
 		display: block 
-	
+		border-bottom: 1px dashed #777
+		padding-left: 0
+		margin: $spacing/2 0
+		padding: $spacing/2 0
+		background-color: transparent
+		background-color: #eee
+		text-align: center
+	a.level-4 
+		display: block
+		background-color: #fff
+		color: #000
+		font-size: 0.8em
+		padding-left: 0
+		font-weight: 400
+		text-transform: none
+		background-color: transparent		
+		&:hover 
+			padding-left: 0.2em
+			// background-color: $primary
+			// color: #fff
+			color: $primary
+			font-weight: 400
+			&:before 
+				font-family: "FontAwesome"
+				content: "\f054"
+				// color: $primary
+				margin-right: 0.5em
+				font-size: 0.6em
+				vertical-align: middle
 	.dropdown		
 		.level-2:after
 			font-family: "FontAwesome"
@@ -38,40 +71,48 @@
 		display: none
 		+v-nav
 		+clearfix
-		+background-image(linear-gradient(white, #fafafa))
-		border-bottom: 2px solid $accent
-		min-height: 300px
-		position: absolute
-		top: 25px
-		left: 0
-		.M2
-			li 
-				position: relative
-		.M3 
-			display: block
-			position: relative
-			top: 0
-			li 
-				width: 100%
-				display: block
-				float: none		
+		
 		li 
 			float: left			
 			width: 20%
-		.level-2			
-			a
-				+nav-level-2(transparent, $accent, transparent, $accent)
-				text-transform: uppercase
-				font-weight: 700
-				font-size: 0.9em
-				padding-left: 0.8em
-		.level-3
-			a
-				+nav-level-2(transparent, #000, transparent, $accent)
-				font-size: 0.8em
-				text-transform: none
-				font-weight: 400			
-				padding-left: 1em
+		&.M2
+			padding-top: 1em
+			border-bottom: 2px solid $primary
+			padding-bottom: 2em
+			position: absolute
+			top: 25px
+			left: 0
+			+box-shadow(0px 1px 2px #aaa)	
+			background-color: #fff
+			+background-image(linear-gradient(#fff, #fafafa))		
+			li 
+				position: relative
+				padding: 0px $spacing
+		&.M3 
+			display: block
+			position: relative
+			top: 0
+			width: 100%
+			li 
+				width: 100%
+				display: block
+				float: none	
+				padding-left: 0	
+		
+		// .level-2			
+		// 	a
+		// 		+nav-level-2(transparent, $accent, transparent, $accent)
+		// 		text-transform: uppercase
+		// 		font-weight: 700
+		// 		font-size: 0.9em
+		// 		padding-left: 0.8em
+		// .level-3
+		// 	a
+		// 		+nav-level-2(transparent, #000, transparent, $accent)
+		// 		font-size: 0.8em
+		// 		text-transform: none
+		// 		font-weight: 400			
+		// 		padding-left: 1em
 		.level-2-container
 			padding: 1em $grid-gutter-width/2
 			float: left		
