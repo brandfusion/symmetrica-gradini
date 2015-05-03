@@ -1,3 +1,9 @@
+.cart-page
+	+make-row
+	color: #000
+	font-size: 1em
+.cart-list
+	+make-xs-column(12)	
 .cart-product
 	width: 50%
 	float: left
@@ -14,21 +20,23 @@
 	width: 20%
 	float: left
 	padding: 0 $spacing
-.cart-page 
-	font-size: 0.9em
 .cart-delete
 	position: absolute
 	right: 10px
 	top: 10px	
 .header-cart
 	+clearfix
-	border-bottom: 1px solid $secondary
+	border-bottom: 1px solid #000
 	padding-bottom: 0.5em
 	margin-bottom: 1em	
+	font-weight: 800
+	text-transform: uppercase
+	font-size: 0.8em
 	.cart-product 
 		padding-left: 0px
 .cart-row
 	+clearfix	
+	font-size: 0.9em
 	background-color: #fff
 	padding: 0.2em 0
 	margin-bottom: $spacing
@@ -43,15 +51,16 @@
 		width: 100px	
 	.cart-price 
 		span 
-			font-size: 0.8em
-			color: $gray					
+			font-size: 0.7em
+			color: #aaa					
 	h2 
 		font-weight: 400	
 		text-transform: none
 		font-size: 1em
 		font-weight: 600
 		a			
-			color: $secondary
+			color: #000
+			font-weight: 700
 	.cart-quantity
 		input 
 			max-width: 60px
@@ -64,6 +73,27 @@
 				color: $secondary
 	.product-code
 		font-size: 0.8em	
-
+.cart-summary
+	+clearfix
+	background-color: #fff 
+	line-height: 1.3em 
+	font-size: 0.8em 
+	padding: 0.5em
+	font-weight: 400
+	margin-bottom: $spacing
+	border-bottom: 2px solid $primary
+	p 
+		margin-bottom: 0
+	.subtotal 
+		float: right		
+		font-weight: 800	
+		font-size: 1.2em
+.cart-footer 
+	font-size: initial
+	margin-bottom: $spacing*2
+	.go-checkout 
+		float: right
+	.continue-shopping
+		margin-right: $spacing	
 
 			

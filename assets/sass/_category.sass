@@ -12,6 +12,7 @@
 		background-color: #fff
 		color: #000
 		border-bottom: none
+		font-weight: 800
 		&:after
 			content: "//"
 			margin-left: 5px
@@ -61,9 +62,10 @@
 			&:hover
 				color: $secondary	
 		.filter-title	
-			margin-bottom: 0
-			font-weight: 600
-			font-size: 1.2em
+			margin-bottom: 0		
+			font-weight: 800
+			text-transform: uppercase
+			font-size: 1em
 			&:before
 				font-family: "FontAwesome"
 				content: "\f105"
@@ -80,26 +82,41 @@
 	input 
 		vertical-align: middle
 		width: auto
-.cancel-filters
-	font-size: 0.8em	
-	font-weight: 300
-	color: gray
-	border-top: 1px solid #eee
-	padding-top: 0.2em
-	display: block
-	&:after
-		font-family: "FontAwesome"
-		content: "\f00d"
-		margin-left: 0.5em
-	&:hover
-		color: red
-	@media (max-width: 768px)
-		padding: 0.5em 1em
-		font-size: 1em
-		color: #000
-		border: 1px solid #aaa
-		display: inline-block
-		font-weight: 400	
+	.apply-filter
+		+transition(all 0.2s ease-in)
+		background-color: #000
+		color: #fff
+		width: 100%
+		outline: none
+		display: block 
+		text-align: center
+		font-size: 0.8em
+		line-height: 2em
+		height: 2em		
+		border: none
+		@media (min-width: $screen-lg-min)
+			width: 50%
+			float: left 
+		&:hover 
+			background-color: $primary
+	.cancel-filter 
+		+transition(all 0.2s ease-in)
+		background-color: #fff 
+		font-size: 0.8em
+		color: #000 
+		width: 100%
+		float: left 
+		display: block 
+		text-align: center
+		line-height: 2em 
+		height: 2em
+		cursor: pointer
+		@media (min-width: $screen-lg-min)
+			width: 50%
+			float: left 
+		&:hover 
+			background-color: $primary
+			color: #fff
 .manufacturer
 	ul
 		+h-nav()
@@ -184,6 +201,6 @@
 			line-height: 0.8
 			&.active
 				a
-					text-decoration: underline		
-		
+					text-decoration: underline	
+
 				

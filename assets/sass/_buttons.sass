@@ -1,10 +1,46 @@
 .btn-submit
 	+transition(all 0.2s ease-in)
 	background-color: $red	
-	border: 1px solid darken($red, 10%)
+	color: #fff
+	outline: none
+	box-shadow: none
+	&:hover
+		background-color: $blue		
+		color: #fff
+.go-checkout
+	@extend .btn-submit
+	line-height: 2em
+	padding: 0 1em
+.clear-cart
+	+transition(all 0.2s ease-in)
+	line-height: 2em
+	padding: 0 1em
+	background-color: #ddd	
 	color: #fff
 	outline: none
 	box-shadow: none
 	&:hover
 		background-color: $blue
-		border: 1px solid darken($blue, 10%)		
+		color: #fff	
+.continue-shopping
+	+transition(all 0.2s ease-in)
+	line-height: 2em
+	padding: 0 1em
+	background-color: lighten($secondary, 20%)
+	background-color: #000
+	color: #fff
+	outline: none
+	box-shadow: none
+	&:hover
+		color: #fff
+		background-color: $blue	
+.newsletter
+	+transition(all 0.2s ease-in)
+	background-color: $secondary
+	color: #fff
+	display: inline-block
+	border: none 
+	max-width: 200px
+	text-align: center 
+	&:hover 
+		background-color: $primary
