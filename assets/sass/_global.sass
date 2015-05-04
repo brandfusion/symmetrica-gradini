@@ -1,8 +1,10 @@
 body
-	background: url("img/switch-winter-bg.jpg") top center no-repeat fixed // SWITCH
-	background: url("img/switch-summer-bg.jpg") top center no-repeat fixed // SWITCH
-	background-size: cover
-	background-size: 140%
+	background-color: #fff	
+	@media (min-width: $screen-sm-min)
+		// background: url("img/switch-winter-bg.jpg") top center no-repeat fixed // SWITCH
+		background: url("img/switch-summer-bg.jpg") top center no-repeat fixed // SWITCH
+		background-size: cover
+		background-size: 140%		
 .container
 	+container-fixed
 	@media (min-width: $screen-sm-min)

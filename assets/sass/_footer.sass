@@ -38,15 +38,17 @@
 		+make-row
 		background-color: #000
 		color: #fff
-		padding: $spacing
+		padding: $spacing 0px
 		.footer-links
-			+make-xs-column(4)
+			+make-sm-column(4)
+			margin-bottom: 1em
 			a 
 				color: #ddd
 				&:hover 
 					color: $secondary
 		.mailchimp
-			+make-xs-column(4)
+			+make-sm-column(4)
+			margin-bottom: 1em
 			input 
 				+fancy-input
 				border: 1px solid $secondary
@@ -71,7 +73,8 @@
 				&:hover 
 					background-color: $primary		
 		.logo-partner	
-			+make-xs-column(4)	
+			+make-sm-column(4)	
+			margin-bottom: 1em
 			a 
 				color: $secondary		
 			ul 
@@ -89,8 +92,25 @@
 					max-width: 50px		
 	.lower
 		+make-row
+		font-size: 0.8em
 		color: #fff
 		background-color: #000				
+		.footer-logo
+			+make-sm-column(4)
+			margin-bottom: 1em
+		.footer-nav 
+			+make-sm-column(4)
+			margin-bottom: 1em
+			ul 
+				+h-nav
+				margin-bottom: 0.5em
+			a 
+				margin-right: 0.5em	
+			p 
+				margin-bottom: 0.5em	
+		.footer-pay
+			+make-sm-column(4)		
+			margin-bottom: 1em
 .footer-headline
 	font-weight: 700
 	font-size: 1em

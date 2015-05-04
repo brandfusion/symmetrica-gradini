@@ -1,8 +1,51 @@
+.header-mobile
+	display: block
+	font-size: 1.5em
+	position: fixed
+	top: 0
+	left: 0	
+	right: 0
+	padding: 0px $spacing
+	background-color: #fff
+	+clearfix 
+	z-index: 99
+	padding: $spacing
+	margin: $spacing/2
+	box-shadow: 0px 0px 3px #777
+	@media (min-width: $screen-sm-min) 
+		display: none
+	.logo 
+		width: 160px
+		float: left
+		height: 38px
+		overflow: hidden
+	.mobile-cart	
+		background-color: #00bed4
+		color: #fff
+		padding: 0 0.5em
+		height: 38px
+		font-size: 0.7em
+		line-height: 38px
+		vertical-align: top
+	.mobile-nav-trigger
+		text-align: right
+		width: 50%
+		float: right			
+		.fa-bars 
+			background-color: $primary
+			color: #fff
+			padding: 0 0.5em
+			height: 38px
+			vertical-align: top
+			line-height: 38px			
 .header	
 	+clearfix
 	margin-bottom: 1em	
 	font-size: 0.8em
 	+transition(all 0.2s ease-in)
+	display: none 
+	@media (min-width: $screen-sm-min) 
+		display: block
 	.top
 		+clearfix
 		display: block
