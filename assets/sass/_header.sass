@@ -19,21 +19,24 @@
 		.fa 
 			display: inline-block 
 			margin-right: 0.5em	
-		ul			
+		ul		
+			margin-right: -10px	
 			+h-nav
 			display: none
 			float: right
+			background-color: #fff 
+			background-color: rgba(255,255,255,0.8)
 			@media (min-width: 768px)
 				display: block
 			a
 				padding: 0 0.5em
 				margin: 0
-				color: #fff
+				color: #000
 				&:hover
-					color: darken(adjust_hue($accent, 136), 11)
-			li:last-child
-				a
-					padding-right: 0		
+					color: $secondary
+			// li:last-child
+			// 	a
+			// 		padding-right: 0		
 	.upper		
 		+make-row
 		position: relative		
@@ -41,6 +44,21 @@
 		color: #fff			
 		padding: 0px $spacing
 		min-height: 70px
+		ul
+			+h-nav
+			line-height: 2.2em
+			display: none
+			float: right
+			background-color: #fff 
+			background-color: rgba(255,255,255,0.8)
+			@media (min-width: 768px)
+				display: block
+			a
+				padding: 0 0.5em
+				margin: 0
+				color: #000
+				&:hover
+					color: $secondary
 		@media (min-width: 768px)		
 			padding: 0px
 		a
@@ -55,16 +73,38 @@
 				left: 0px
 				z-index: 2
 				width: 230px
-		.header-info			
-			+clearfix			
-			+make-sm-column(9)
-			+make-xs-column(6)		
-			@media (min-width: 768px)			
-				width: 100%
-				padding: 0px
-				padding-left: 220px
-		.header-item
-			padding-top: $spacing			
+		.header-cos	
+			line-height: 2.2em
+			display: inline-block				
+			padding-top: 0px			
+			float: right
+			a 
+				background-color: $primary
+				padding: 0 1em
+				display: block
+				color: #fff	
+				&:hover 
+					background-color: #000
+					.cart-icon 
+						color: $primary
+			.cart-icon
+				font-size: 1.2em
+				margin-right: 0.5em
+				color: #000	
+			.cos 
+				text-decoration: underline	
+				margin-left: 0.5em
+		.header-login
+			float: right
+			display: inline-block
+			padding: 0 1em
+			line-height: 2.2em
+			background-color: $secondary
+			a 
+				color: #fff	
+				margin-right: 0.5em
+				&:hover 
+					color: #000
 		.header-phone, .header-delivery
 			display: none
 			+make-sm-column(4)			
@@ -81,18 +121,7 @@
 			.fa 
 				vertical-align: top
 				font-size: 2em
-				margin: 0.2em 0.5em 0		
-		.header-login
-			+make-sm-column(2)	
-			+make-xs-column(6)
-		.header-cos
-			+make-sm-column(2)
-			+make-xs-column(6)
-			padding-top: 0px
-			background-color: $red
-			float: right
-			a 
-				color: #fff				
+				margin: 0.2em 0.5em 0
 	.middle
 		+make-sm-column(12)
 		+clearfix		
