@@ -143,3 +143,36 @@ body
 	padding-bottom: 0.5em
 	line-height: 1
 	display: block
+.section-header
+	font-size: 1em
+	font-weight: 800
+	text-transform: uppercase
+	border-bottom: 1px solid #000
+	margin: 0 0 0.5em
+	padding-bottom: 0.5em
+	line-height: 1
+	display: block	
+#brands-page
+	+make-row	
+.logos-list	
+	+clearfix
+	padding-top: 1em
+	.item
+		+make-sm-column(2,10)
+		margin-bottom: $spacing*2
+	.box-item
+		// border: 1px solid #ddd		
+		height: 104px		
+		a 
+			display: block
+			&:hover 
+				+scale(1.1)
+		img 
+			max-height: 65px
+			margin: 0 auto
+.team-item
+	+clearfix
+	margin-bottom: $spacing
+	img 
+		float: left 
+		margin: 10px 20px 0 0			

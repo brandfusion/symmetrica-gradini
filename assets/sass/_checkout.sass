@@ -10,11 +10,35 @@
 		line-height: 1
 		padding-bottom: 0.5em
 		margin-bottom: 1em
+		+clearfix
+		p 
+			margin-bottom: 0px
+		* 
+			display: inline-block
+		a 
+			float: right
+			color: #000
+			text-transform: none
+			font-weight: 400
+			&:hover 
+				color: $secondary
+			&:before 
+				font-family: "FontAwesome"
+				content: "\f059"
+				margin-right: 0.2em
+				color: $secondary	
+			&.edit
+				&:before
+					content: "\f07a"	
+					color: $primary
+				&:hover 
+					color: $primary	
 	label
 		font-weight: 600
 		width: 200px	
 		display: inline-block
 		margin-bottom: 0.5em
+		vertical-align: top
 		&.address 
 			width: 90%
 	input[type="text"],input[type="email"],input[type="password"]
@@ -27,8 +51,147 @@
 		&:focus 
 			border-color: $secondary
 			box-shadow: 0px 0px 3px rgba(0,190,212,0.4)
+	select 
+		line-height: 2em
+		padding: 0.2em 0.5em
+		width: 200px
+		border: 1px solid #aaa
+		background-color: #fff	
+		outline: none
+		&:focus 
+			border-color: $secondary
+			box-shadow: 0px 0px 3px rgba(0,190,212,0.4)
 .checkout-content
 	font-size: 0.8em
 	+make-sm-column(8)
+.checkout-detail
+	@media (max-width: $screen-sm-min - 1)
+		display: none
+	font-size: 0.8em
+	+make-sm-column(4)
+	p 
+		margin-bottom: 0.5em
+		+clearfix
+		a
+			color: #000
+			text-decoration: underline 
+			&:hover 
+				color: $secondary
+		span 
+			float: right
+			font-weight: 600	
+		sup 
+			font-size: 0.6em
+			color: #000
+			font-weight: 700	
+	.links 
+		color: #000
+		text-decoration: underline
+		font-size: 0.8em
+		&:hover 
+			color: $secondary
 .form-group
 	margin-bottom: 0.5em	
+.transport-box
+	img 
+		display: inline-block
+		max-height: 16px
+	label 
+		margin-bottom: 0
+	input 
+		margin-bottom: 0
+	.transport-detail			
+		font-size: 0.8em
+		color: #777
+.metoda-plata
+	margin-top: 1em		
+.transport 
+	margin-top: 1em
+	label 
+		width: 250px		
+.coupon
+	margin-top: 1em
+	a 
+		background-color: #000
+		color: #FFF
+		line-height: 2em
+		border: 1px solid #000
+		padding: 0 1em
+		font-weight: 400	
+		&:hover 
+			background-color: $secondary 
+			border-color: $secondary
+.checkout-comment	
+	margin-top: 1em			
+	textarea 
+		width: 100%
+		max-width: 100%
+		outline: none 
+		border: 1px solid #aaa
+		box-shadow: 0px 0px 3px #eee	
+		&:focus 
+			border-color: $secondary
+			box-shadow: 0px 0px 3px rgba(0,190,212,0.4)
+.total 
+	+clearfix
+	margin-top: 1em
+	font-weight: 700
+	border-bottom: 1px solid #000
+	line-height: 1.5em
+	padding-bottom: 0.2em
+	margin-bottom: $spacing
+	.total-sum 
+		font-size: 1.5em
+	p 
+		margin-bottom: 0		
+.finish
+	a 
+		color: #000
+		text-decoration: underline			
+.checkout-login-container
+	+make-row
+	margin-bottom: $spacing
+	display: none
+	.checkout-login 
+		background-color: #fff
+		padding: $spacing 0
+		color: #000
+		margin: 0 $spacing
+		border-bottom: 2px solid $secondary
+		+clearfix
+	a 
+		color: #000
+		text-decoration: underline
+		&:hover 
+			color: $secondary
+	.headline
+		border-bottom: 1px solid #ddd
+		padding-bottom: 0.5em
+		line-height: 1
+		font-weight: 700
+		margin-bottom: 0.5em
+	label
+		width: 190px	
+	.login-box 
+		+make-sm-column(8)
+	.checkout-social-login
+		+make-sm-column(4)		
+		a 
+			text-decoration: none 
+			width: 100%
+			&:before
+				font-family: "FontAwesome"
+				margin-right: 0.2em
+				width: 12px
+				display: inline-block
+				vertical-align: middle
+			&.facebook-login 
+				&:before 				
+					color: #3b5998
+					content: "\f09a"
+			&.google-login
+				&:before
+					color: #DF4A32
+					content: "\f0d5"
+	
+	
