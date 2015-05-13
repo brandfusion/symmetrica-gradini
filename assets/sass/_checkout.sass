@@ -28,19 +28,29 @@
 				margin-right: 0.2em
 				color: $secondary	
 			&.edit
+				font-size: 0.9em
+				color: #000
 				&:before
-					content: "\f07a"	
-					color: $primary
+					content: "\f07a"				
+					margin-right: 0.5em
+					font-size: 1.2em
+					color: #000
 				&:hover 
-					color: $primary	
+					color: $secondary
+					&:before
+						color: $secondary
 	label
 		font-weight: 600
 		width: 200px	
 		display: inline-block
 		margin-bottom: 0.5em
 		vertical-align: top
+		@media (min-width: $screen-lg-min)
+			width: 150px
 		&.address 
 			width: 90%
+			@media (min-width: $screen-lg-min)
+				margin-bottom: 4.8em
 	input[type="text"],input[type="email"],input[type="password"]
 		width: 200px
 		max-width: 200px
@@ -73,7 +83,8 @@
 		margin-bottom: 0.5em
 		+clearfix
 		a
-			color: #000
+			font-size: 0.9em
+			color: $secondary
 			text-decoration: underline 
 			&:hover 
 				color: $secondary
@@ -84,6 +95,12 @@
 			font-size: 0.6em
 			color: #000
 			font-weight: 700	
+	.total-pay
+		font-weight: 800
+		border-bottom: 2px solid #000
+		margin-bottom: 0
+		span 
+			font-weight: 800		
 	.links 
 		color: #000
 		text-decoration: underline
@@ -96,16 +113,15 @@
 	img 
 		display: inline-block
 		max-height: 16px
+		display: none
 	label 
 		margin-bottom: 0
 	input 
 		margin-bottom: 0
 	.transport-detail			
 		font-size: 0.8em
-		color: #777
-.metoda-plata
-	margin-top: 1em		
-.transport 
+		color: #777	
+.transport, .metoda-plata 
 	margin-top: 1em
 	label 
 		width: 250px		
@@ -172,10 +188,16 @@
 		margin-bottom: 0.5em
 	label
 		width: 190px	
-	.login-box 
+		@media (min-width: $screen-lg-min)
+			width: 140px
+	.login-box 	
 		+make-sm-column(8)
-	.checkout-social-login
-		+make-sm-column(4)		
+		+make-lg-column(12)
+	.checkout-social-login		
+		+make-sm-column(4)	
+		+make-lg-column(12)
+		@media (min-width: $screen-lg-min)
+			margin-top: 2em	
 		a 
 			text-decoration: none 
 			width: 100%
@@ -193,5 +215,28 @@
 				&:before
 					color: #DF4A32
 					content: "\f0d5"
-	
-	
+.xlg-container 
+	+clearfix
+.xlg-column
+	@media (min-width: $screen-lg-min)
+		width: 50%	
+		float: left 
+		&:nth-child(even)
+			padding-left: $spacing/2
+		&:nth-child(odd)
+			padding-right: $spacing/2
+
+//active checkout fields
+.transport-box
+	.plati:hover 
+		background-color: #D8F7D7
+	.livrare:hover
+		background-color: #D8F7D7	
+.transport-box 
+	.checkout-active
+		background-color: #D8F7D7
+
+select, input[type="text"], input[type="email"], input[type="password"], textarea
+	&.checkout-active
+		border: 1px solid #1BC208
+		background-color: #D8F7D7	
