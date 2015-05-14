@@ -1,5 +1,7 @@
 .article-page 
 	padding: 0px
+	font-size: 0.8em
+	+make-row
 	.inline
 		font-size: 0.8em
 		margin-bottom: 0.5em
@@ -44,15 +46,15 @@
 	.header
 		margin-bottom: 1em		
 .article-aside-list 	
-	+make-md-column(4)	
-	font-size: 0.8em
+	+make-md-column(4)
 	.media
 		margin: 0 0 1em		
 	.media-object
 		width: 60px		
-	h4 
-		width: 90%
+	h4 	
 		+text-overflow()
+		font-weight: 700
+		text-transform: uppercase
 		a
 			display: inline
 	p
