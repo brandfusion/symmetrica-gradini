@@ -1,120 +1,60 @@
 .footer
+	// @include make-row();
+	padding: 1em 0
+	// min-height: 120px
+	color: #000
+	background-color: #fff
+	z-index: 3
+	position: relative
 	a 
-		color: #fff 
+		color: #000
 		&:hover
-			color: $secondary
-	.upper
-		+make-row
-		background-color: #fff	
-		color: #000		
-		font-size: 0.8em
-		padding: $spacing 0
-		.info
-			+make-sm-column(4)	
-			min-height: 5em		
-			*
-				padding-left: 3.3em
-			*:first-child
-				padding-top: 0.5em	
-			p 
-				margin-bottom: 0	
-			&:before
-				font-family: "FontAwesome"
-				content: "\f095"
-				font-size: 3em
+			color: $primary
+	.copyright
+		+make-sm-column(10)
+		+make-xs-column(10)
+		font-size: 12px
+		p, a
+			display: inline
+		ul
+			list-style-type: none
+			li
 				float: left
-				color: $secondary	
-				color: #000		
-		.location
-			@extend .info			
-			&:before				
-				content: "\f041"				
-		.opened
-			@extend .info		
-			&:before				
-				content: "\f017"
-	.middle
-		font-size: 0.7em
-		+make-row
-		background-color: #000
-		color: #fff
-		padding: $spacing 0px
-		.footer-links
-			+make-sm-column(4)
-			margin-bottom: 1em
-			a 
-				color: #ddd
-				&:hover 
-					color: $secondary
-		.mailchimp
-			+make-sm-column(4)
-			margin-bottom: 1em
-			input 
-				+fancy-input
-				border: 1px solid $secondary
-				line-height: 2em
-				max-width: 200px
-				background-color: #333
-				margin-bottom: 0.5em
-				&:focus
-					background-color: darken($secondary,20%)
-					border: 1px solid $secondary
-					color: #fff				
-					box-shadow: none
-			.newsletter
-				+transition(all 0.2s ease-in)
-				background-color: $secondary
-				color: #fff
-				display: inline-block
-				border: none 
-				max-width: 200px
-				text-align: center 
-				outline: none
-				&:hover 
-					background-color: $primary		
-		.logo-partner	
-			+make-sm-column(4)	
-			margin-bottom: 1em
-			a 
-				color: $secondary		
-			ul 
-				+h-nav 
-			li 
-				width: 25%
-			img 
-				max-width: 80px
-			.compari
-				padding-top: 14px
-			.shopmania
-				padding-top: 17px
-			.trusted
-				img 
-					max-width: 50px		
-	.lower
-		+make-row
-		font-size: 0.8em
-		color: #fff
-		background-color: #000				
-		.footer-logo
-			+make-sm-column(4)
-			margin-bottom: 1em
-		.footer-nav 
-			+make-sm-column(4)
-			margin-bottom: 1em
-			ul 
-				+h-nav
-				margin-bottom: 0.5em
-			a 
-				margin-right: 0.5em	
-			p 
-				margin-bottom: 0.5em	
-		.footer-pay
-			+make-sm-column(4)		
-			margin-bottom: 1em
-.footer-headline
-	font-weight: 700
-	font-size: 1em
-	text-transform: uppercase	
-	color: $secondary
-	display: block
-	margin-bottom: 0.5em
+				&:after
+					content: "|"
+					margin-left: 5px
+					margin-right: 5px
+				&:last-child:after
+					content: ""
+				@media (max-width: 768px)
+					float: none
+					width: 100%
+					&:after
+						content: ""
+	.social
+		+make-xs-column(2)
+		+make-sm-column(2)
+		text-align: right
+		a
+			font-size: 16px
+			margin-left: 10px
+			@media (max-width: 768px)
+				font-size: 20px
+				min-width: 28px
+				display: block
+				margin: 0px
+
+// .footer .social {
+// 	a {
+// 		background-image: url("../img/desperiatfete.jpg");
+// 		background-repeat: no-repeat;
+// 		background-position: left top;
+// 		width: 70px;
+// 		height: 60px;
+// 		display: block;
+// 		float: right;
+// 	}
+// 	.fa {
+// 		display: none;
+// 	}
+// }

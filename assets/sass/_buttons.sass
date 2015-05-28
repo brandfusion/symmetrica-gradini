@@ -1,120 +1,16 @@
-.btn-submit
+.btn-primary
 	+transition(all 0.2s ease-in)
-	background-color: $red	
-	color: #fff
-	outline: none
-	box-shadow: none
-	&:hover
-		background-color: $blue		
-		color: #fff
-.go-checkout
-	@extend .btn-submit
-	line-height: 2em
-	padding: 0 1em
-	@media (max-width: $screen-sm-min - 1)
-		width: 100%
-		text-align: center
-		margin-bottom: 10px
-		clear: both
-		border: 1px solid darken($primary, 10%)
-		line-height: 2.8em
-		&:before 
-			font-family: "FontAwesome"
-			content: "\f046"
-			margin-right: 0.5em
-.clear-cart
-	+transition(all 0.2s ease-in)
-	line-height: 2em
-	padding: 0 1em
-	background-color: #ddd	
-	color: #fff
-	outline: none
-	box-shadow: none
-	&:hover
-		background-color: $blue
-		color: #fff	
-	@media (max-width: $screen-sm-min - 1)
-		text-align: center
-		font-size: 0.8em
-		float: right
-		width: 40%	
-		line-height: 3em
-		background-color: #fff 
-		color: #000 
-		border: 1px solid #000
-.continue-shopping
-	+transition(all 0.2s ease-in)
-	line-height: 2em
-	padding: 0 1em
-	background-color: lighten($secondary, 20%)
-	background-color: #000
-	color: #fff
-	outline: none
-	box-shadow: none
-	&:hover
-		color: #fff
-		background-color: $blue	
-	@media (max-width: $screen-sm-min - 1)
-		text-align: center
-		background-color: #fff 
-		color: #000 
-		border: 1px solid #000
-		font-size: 0.8em
-		float: left
-		width: 55%
-		margin-right: 5%
-		line-height: 3em	
-.newsletter
-	+transition(all 0.2s ease-in)
-	background-color: $secondary
-	color: #fff
 	display: inline-block
-	border: none 
-	max-width: 200px
-	text-align: center 
-	&:hover 
-		background-color: $primary
-.auth-clients
-	+transition(all 0.2s ease-in)
-	background-color: $secondary
+	background-color: $primary
 	color: #fff
-	text-align: center
-	padding: 0.5em 1em
+	text-transform: uppercase
+	font-size: 0.8em
 	font-weight: 600
-	margin-bottom: 0.5em
-	&:after
-		font-family: "FontAwesome"
-		content: "\f090"
-		margin-left: 0.5em
-		font-weight: 400
-		display: inline-block
-		+transition(all 0.2s ease-in)
+	line-height: 2em
+	padding: 0px 0.5em
+	border: none
+	text-align: center
+	outline: none
 	&:hover 
 		background-color: #000
-		color: #fff
-		&:after
-			+rotate(90deg)
-	&.caret
-		&:after
-			+rotate(90deg)
-.login
-	width: 200px	
-	border: none
-	outline: none
-	display: inline-block
-	background-color: $secondary
-	color: #fff
-	font-size: 0.8em
-	text-transform: uppercase
-	font-weight: 700
-	line-height: 2.7em
-	&:hover 
-		background-color: #000	
-.place-order
-	@extend .go-checkout
-	display: inline-block
-	border: none
-	width: 200px
-	float: right
-	line-height: 2.5em
-	font-weight: 600		
+		color: $red
