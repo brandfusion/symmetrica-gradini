@@ -9,6 +9,7 @@
   a
     color: #666
     +animation(0.1s)
+    font-weight: 300
     &.inpath
       color: $red
 
@@ -20,24 +21,26 @@
 
 // Main Nav
 .navigation-main-wrapper
-  +make-md-column(12)
+  // +make-md-column(12)
   padding: 0px
-  background-color: #fff
+  // background-color: #fff
   z-index: 2
   position: relative
+  float: right
   .navigation-main-container
     +make-md-column(12)
 
 .navigation-main
   +clearfix 
-  width: 80%
+  // width: 80%
   float: left
   li
-    margin-right: 40px
+    margin-right: 1em
   a
-    +nav-level-1(white, black, white, $red)
+    +nav-level-1(transparent, black, transparent, $red)
 .nav-wrap 
-  border-top: 1px solid #000
+  // border-top: 1px solid #000
+  padding-top: 2em
 .left-nav
   +make-sm-column(2)
   // padding-left: 0px;

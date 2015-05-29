@@ -15,15 +15,18 @@ body
 		width: $container-lg
 .proiect-list
 	+clearfix
-	padding-top: 110px
+	// padding-top: 110px
 	.item
-		+make-sm-column(2,10)
-		margin-bottom: $spacing*2
+		+make-sm-column(4)
+		+make-md-column(4)
+		+make-lg-column(4)
+		// margin-bottom: $spacing*2
 		position: relative
 		overflow: hidden
+		padding: 0px
 		&:hover 
 			.proiect-extra
-				transform: translate(-80%,0)
+				+transform(translate(-100%,0))
 			.title 
 				opacity: 0	
 		.big-image-wrap
@@ -36,9 +39,17 @@ body
 				z-index: 99
 				color: #fff
 				text-align: center
-				background-color: $primary
+				background-color: rgba(255,255,255,0.8)
+				color: #000
 				+transition(all 0.2s ease-out)	
-				z-index: 10		
+				z-index: 5		
+				font-weight: 400
+				width: 40%
+				left: 30%
+				padding: 0.2em 0.5em
+				.fa 
+					margin-left: 0.5em
+					color: $primary
 	.proiect-extra
 		position: absolute
 		left: 100%
@@ -48,19 +59,65 @@ body
 		background-color: #fff
 		padding: 1em
 		border-left: 2px solid $primary
-		width: 100%
-		z-index: 99
+		width: 40%
+		z-index: 10
 		+transition(all 0.5s ease-out)
 		.ask-for-offer 
 			font-size: 1em
 			font-weight: 400
 			position: absolute
 			bottom: 1em	
-			left: 1em
+			left: 0			
+			padding: 0px $spacing
 			width: 100%
-			right: 0
 			.fa 
 				vertical-align: middle
+				margin-right: 0.5em
+				float: right
+				line-height: 1.4em
+			a 
+				border: 1px solid $primary
+				padding: 0.2em
+				text-align: left
+				padding-left: 0.5em	
+				display: block
+				&:hover 
+					border-color: #000
+					color: #000
+					.fa 
+						color: #000
+						+transition(all 0.2s ease-out)
+						+transform(translate(0.2em,0))
+		.view-project
+			font-weight: 400
+			position: absolute
+			bottom: 3.5em
+			left: 0
+			color: #000
+			padding: 0 $spacing
+			width: 100%
+			.fa 
+				vertical-align: middle
+				margin-right: 0.5em
+				float: right
+				line-height: 1.4em
+			a 
+				background-color: $primary
+				color: #fff 
+				font-weight: 300
+				padding: 0.2em
+				text-align: left
+				padding-left: 0.5em	
+				display: block
+				border: 1px solid $primary
+				&:hover 
+					background-color: #000
+					color: #fff
+					border-color: #000
+					.fa 
+						color: #fff
+						+transition(all 0.2s ease-out)
+						+transform(translate(0.2em,0))
 		.headline
 			border-bottom: 1px solid $primary
 			font-size: 0.8em
