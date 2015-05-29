@@ -27,9 +27,14 @@
   z-index: 2
   position: relative
   float: right
+  @media (min-width: 1600px)
+    padding-right: 0px
+  @media (min-width: 1200px)
+    padding-right: 11em 
+  @media (min-width: 992px)
+    padding-right: 11em   
   .navigation-main-container
     +make-md-column(12)
-
 .navigation-main
   +clearfix 
   // width: 80%
