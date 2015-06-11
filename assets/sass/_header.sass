@@ -29,7 +29,7 @@
     background-color: $primary
     color: #fff 
     padding: 0 0.5em
-    margin-right: 0.5em
+    // margin-right: 0.5em
     +transition(all 0.3s ease-out)
     &:hover 
       color: #fff 
@@ -100,6 +100,13 @@
     width: 100%
     margin: 0px
     padding: 0px
+  &.fixed 
+    position: fixed 
+    width: 100% 
+    top: 0
+    left: 0
+    right: 0 
+    z-index: 99 
 
 // .header-scope
 //   width: 100%

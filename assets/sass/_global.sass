@@ -29,7 +29,7 @@ body
 			.title-project
 				opacity: 1		
 		.item-wrap
-			padding: $spacing
+			padding: $spacing/2
 			position: relative		
 		.big-image-wrap
 			position: relative 
@@ -170,6 +170,12 @@ body
 	.main-image 
 		img 
 			width: 100%
+		&.overflow 
+			overflow: auto
+			img 
+				max-width: 1920px
+				max-height: 1280px
+				width: 1920px	
 	.project-extra 
 		// background-color: #fff 
 		width: 100%
@@ -213,6 +219,7 @@ body
 			background-color: #fff
 			width: 110px
 			float: left 
+			height: 160px
 			position: relative			
 			// border: 1px solid #fff
 			margin-right: 10px
@@ -250,7 +257,12 @@ body
 			font-size: 0.8em
 			padding-top: 10px		
 			line-height: 1 
-			min-height: 3em	
+			// min-height: 3em	
+			width: 100px
+			text-overflow: ellipsis
+			overflow: hidden
+			white-space: nowrap
+			margin-bottom: 15px
 		.project-extra-image 			
 			height: 120px
 			padding: 0px 10px
@@ -405,3 +417,34 @@ body
 		opacity: 1
 		display: block
 							
+.project-navigation
+	+clearfix
+	position: fixed
+	top: 50%
+	width: 100%
+	margin-top: -1em
+	a 
+		background-color: rgba(255,255,255,0.8)
+		padding: 0.5em
+		color: #000
+		font-size: 0.8em
+		&:hover:before 
+			color: $primary
+		&:hover:after
+			color: $primary
+	.project-next
+		float: right		
+		a 
+			&:after 
+				font-family: "FontAwesome"
+				content: "\f105"			
+				margin-left: 0.5em		
+	.project-previous
+		float: left	
+		a 
+			&:before 
+				font-family: "FontAwesome"
+				content: "\f104"			
+				margin-right: 0.5em	
+.mobile-wrapper 
+	padding-top: 92px				
