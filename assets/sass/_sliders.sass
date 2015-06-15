@@ -1,10 +1,18 @@
 #home-slider
+	position: fixed
+	top: 90px
+	left: 0px 
+	right: 0px
+	bottom: 50px 
+	overflow: hidden
 	.slide-content
 		background-size: cover
 		min-height: 1080px
 		position: relative 
 		.container 
 			position: relative
+			.headline-slide
+				display: none
 			.slide-text
 				color: #fff
 				top: 500px
@@ -12,4 +20,25 @@
 				background-color: rgba(0,0,0,0.8)
 				padding: 1em	
 				left: 0
-				right: 0
+				right: 0	
+	.owl-controls 
+		position: absolute
+		top: 100px
+		z-index: 99
+		color: #fff
+		top: 10px
+		right: 0
+		.owl-nav 
+			width: 3em
+			.owl-prev
+				float: left 
+				margin-right: 0.5em
+				padding: 0.5em 
+				padding-right: 0
+			.owl-next
+				float: right
+				padding: 0.5em 
+				padding-left: 0	
+			.owl-prev, .owl-next
+				&:hover 
+					color: $primary	

@@ -48,7 +48,7 @@ body
 				font-weight: 400
 				width: 40%
 				left: 30%
-				padding: 0.2em 0.5em
+				padding: 0.2em 0.5em				
 				.fa 
 					margin-left: 0.5em
 					color: $primary
@@ -60,19 +60,21 @@ body
 				z-index: 99
 				color: #fff
 				text-align: center
-				background-color: rgba(255,255,255,0.8)
-				color: #000
+				background-color: rgba(255,255,255,0.8)			
 				+transition(all 0.2s ease-out)	
 				z-index: 5		
-				font-weight: 400
-				width: 40%
-				left: 30%
+				font-weight: 300
+				// width: 40%
+				// left: 30%
 				padding: 0.2em 0.5em
-				.fa 
-					margin-left: 0.5em
-					color: $primary	
+				display: inline-block
+				width: 11em
+				background-color: #cc202c
+				left: 50%
+				margin-left: -100px
+				font-weight: 300				
 				&:hover 
-					background-color: $primary
+					background-color: #000
 					color: #fff	
 	.proiect-extra
 		position: absolute
@@ -271,20 +273,25 @@ body
 				max-width: 100%
 	.project-social-block
 		+clearfix
-		width: 120px
-		display: inline-block
-		float: right
+		// width: 120px
+		// display: inline-block
+		// float: right
 		margin-right: -$spacing
+		.at-share-tbx-element .at-share-btn 
+			margin: 0 !important
+			margin-right: 5px !important
+			span 
+				transform: scale(0.9) !important
 		a 
-			width: 50px
-			height: 50px
-			float: left
-			margin-right: 10px		
-			background-color: #fff
-			margin-bottom: 10px
-			text-align: center
-			padding-top: 14px
-			color: #000
+			// width: 50px
+			// height: 50px
+			// float: left
+			// margin-right: 10px		
+			// background-color: #fff
+			// margin-bottom: 10px
+			// text-align: center
+			// padding-top: 14px
+			// color: #000
 			.fa			
 				+transition(all 0s linear)
 			&:hover				
@@ -320,8 +327,7 @@ body
 		+clearfix
 		+transition(all 2s ease-out)
 		overflow: hidden
-		&.show
-			
+		&.show			
 			height: auto
 			+animation(show 1s)
 		form 
@@ -428,10 +434,9 @@ body
 		padding: 0.5em
 		color: #000
 		font-size: 0.8em
-		&:hover:before 
-			color: $primary
-		&:hover:after
-			color: $primary
+		&:hover 
+			background-color: rgba($primary,0.8)
+			color: #fff
 	.project-next
 		float: right		
 		a 
