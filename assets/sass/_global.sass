@@ -117,7 +117,7 @@ body
 					.fa 
 						color: #000
 						+transition(all 0.2s ease-out)
-						+transform(translate(0.2em,0))
+						// +transform(translate(0.2em,0))
 		.view-project
 			font-weight: 400
 			position: absolute
@@ -213,7 +213,7 @@ body
 					color: #fff
 					.fa 						
 						+transition(all 0.2s ease-out)
-						+transform(rotate(90deg))
+						// +transform(rotate(90deg))
 	.project-extra-list
 		+clearfix	
 		display: inline-block
@@ -225,7 +225,7 @@ body
 			position: relative			
 			// border: 1px solid #fff
 			margin-right: 10px
-			margin-bottom: 10px
+			margin-bottom: 7px
 			border-top: 2px solid #fff
 			span 
 				position: absolute
@@ -279,9 +279,12 @@ body
 		margin-right: -$spacing
 		.at-share-tbx-element .at-share-btn 
 			margin: 0 !important
-			margin-right: 5px !important
+			margin-right: 10px !important
 			span 
 				transform: scale(0.9) !important
+		.at-share-tbx-element.addthis_32x32_style .at-share-btn, .at-share-tbx-element.addthis_32x32_white_style .at-share-btn
+			width: 30px !important
+			height: 30px !important			
 		a 
 			// width: 50px
 			// height: 50px
@@ -431,14 +434,15 @@ body
 	margin-top: -1em
 	a 
 		background-color: rgba(255,255,255,0.8)
-		padding: 0.5em
+		padding: 1em
 		color: #000
 		font-size: 0.8em
 		&:hover 
 			background-color: rgba($primary,0.8)
 			color: #fff
 	.project-next
-		float: right		
+		float: right
+		line-height: 3em
 		a 
 			&:after 
 				font-family: "FontAwesome"
@@ -446,6 +450,7 @@ body
 				margin-left: 0.5em		
 	.project-previous
 		float: left	
+		line-height: 3em
 		a 
 			&:before 
 				font-family: "FontAwesome"
