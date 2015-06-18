@@ -1,6 +1,6 @@
 body
 	background-color: #fff
-	padding-bottom: 54px
+	padding-bottom: 3em
 .container
 	+container-fixed
 	@media (min-width: $screen-sm-min)
@@ -182,7 +182,7 @@ body
 		// background-color: #fff 
 		width: 100%
 		position: fixed 
-		bottom: 54px	
+		bottom: 3em	
 		.container 
 			position: relative	
 			+clearfix
@@ -285,6 +285,12 @@ body
 		.at-share-tbx-element.addthis_32x32_style .at-share-btn, .at-share-tbx-element.addthis_32x32_white_style .at-share-btn
 			width: 30px !important
 			height: 30px !important			
+		.addthis_sharing_toolbox	
+			height: 30px !important
+			overflow: hidden !important	
+			margin-bottom: $spacing !important
+		#atstbx	
+			height: 30px !important
 		a 
 			// width: 50px
 			// height: 50px
@@ -322,17 +328,25 @@ body
 				background-color: #000
 				color: #fff	
 	.project-form
-		background-color: #fff		
-		margin-bottom: 1em
+		background-color: #fff	
+		margin: 0
 		color: #000		
 		position: relative
 		height: 0
 		+clearfix
-		+transition(all 2s ease-out)
+		+transition(all 1s ease-out)
 		overflow: hidden
-		&.show			
+		visibility: hidden
+		z-index: -1
+		bottom: 10px
+		left: 0
+		position: absolute
+		width: 100%
+		&.show
 			height: auto
+			visibility: visible
 			+animation(show 1s)
+			z-index: 10
 		form 
 			+make-row
 			padding: 20px
@@ -399,6 +413,11 @@ body
 			position: absolute			
 			bottom: 20px
 			right: 20px
+			outline: none
+			box-shadow: none
+			font-size: 1em
+			padding: 0 1em 
+			line-height: 2em
 			.fa 
 				margin: 0px
 				margin-left: 1em
@@ -415,9 +434,14 @@ body
 		position: absolute
 		top: $spacing
 		right: $spacing
-		cursor: pointer		
+		cursor: pointer	
+		font-size: 0.8em
+		.fa
+			color: $primary	
+			margin-left: 0.5em
 		&:hover 
-			+transform(scale(1.1))
+			color: $primary
+			
 +keyframes(show)
 	0%
 		opacity: 0
@@ -434,7 +458,7 @@ body
 	margin-top: -1em
 	a 
 		background-color: rgba(255,255,255,0.8)
-		padding: 1em
+		padding: 1em 0.7em
 		color: #000
 		font-size: 0.8em
 		&:hover 
@@ -457,4 +481,8 @@ body
 				content: "\f104"			
 				margin-right: 0.5em	
 .mobile-wrapper 
-	padding-top: 92px				
+	padding-top: 3em			
+.hidden
+	z-index: -1
+	+opacity(0)
+	+transition(all 0.1s ease-in)	

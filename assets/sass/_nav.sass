@@ -22,7 +22,7 @@
 // Main Nav
 .navigation-main-wrapper
   // +make-md-column(12)
-  padding: 0px
+  padding: 0.5em 0 0
   // background-color: #fff
   z-index: 2
   position: relative
@@ -41,13 +41,20 @@
   +clearfix 
   // width: 80%
   float: left
+  line-height: 1.5em
   li
     margin-right: 1em
   a
     +nav-level-1(transparent, black, transparent, $red)
+    &.lastitem
+      background-color: $primary
+      color: #fff
+      &:hover 
+        background-color: #000
+        color: #fff
 .nav-wrap 
   // border-top: 1px solid #000
-  padding-top: 2em
+  // padding-top: 2em
   +clearfix
 .left-nav
   +make-sm-column(2)
