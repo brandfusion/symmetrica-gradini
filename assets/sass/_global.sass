@@ -13,6 +13,8 @@ body
 	+clearfix
 	padding: 0 $spacing/2
 	// padding-top: 110px
+	@media (max-width: 991px)
+		padding-top: 3em
 	.item
 		+make-sm-column(6)
 		+make-md-column(4)
@@ -97,7 +99,10 @@ body
 			padding: 0px $spacing
 			width: 100%		
 			position: absolute
-			top: -74px				
+			top: -74px	
+			@media (max-width: 991px)
+				padding: 0 1em 
+				width: auto			
 			.fa 
 				vertical-align: middle
 				margin-right: 0.5em
@@ -170,6 +175,8 @@ body
 					margin-right: 0.5em					
 .project	
 	.main-image 
+		@media (max-width: 991px)
+			display: none
 		img 
 			width: 100%
 		&.overflow 
@@ -178,6 +185,9 @@ body
 				max-width: 1920px
 				max-height: 1280px
 				width: 1920px	
+	.main-image-mobile			
+		@media (min-width: 992px)
+			display: none 			
 	.project-extra 
 		// background-color: #fff 
 		width: 100%
@@ -215,8 +225,10 @@ body
 						+transition(all 0.2s ease-out)
 						// +transform(rotate(90deg))
 	.project-extra-list
-		+clearfix	
-		display: inline-block
+		+clearfix
+		display: none
+		@media (min-width: 992px)
+			display: inline-block
 		.project-extra-item
 			background-color: #fff
 			width: 110px
@@ -456,33 +468,228 @@ body
 	top: 50%
 	width: 100%
 	margin-top: -1em
+	@media (max-width: 991px)
+		top: 5.5em
+		width: auto
+		left: 1em
+		margin-top: 0
 	a 
 		background-color: rgba(255,255,255,0.8)
 		padding: 1em 0.7em
 		color: #000
 		font-size: 0.8em
+		@media (max-width: 991px)
+			display: block
+			width: 2.5em
+			height: 2.5em
+			margin: 0
+			vertical-align: middle
+			padding: 0px
+			border: 1px solid #FFFFFF
+			border-radius: 100%
+			background-color: #FFFFFF
+			text-align: center
+			// box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.6)
+			&:hover 
+				// box-shadow: 0px 0px 0px 10px rgba(204, 32, 44, 0.6)
+				border-color: $primary
 		&:hover 
 			background-color: rgba($primary,0.8)
 			color: #fff
 	.project-next
 		float: right
 		line-height: 3em
+		@media (max-width: 991px)
+			line-height: 2em
 		a 
 			&:after 
 				font-family: "FontAwesome"
 				content: "\f105"			
 				margin-left: 0.5em		
+				@media (max-width: 991px)
+					vertical-align: middle
+					line-height: 1
+					margin-left: 0
+					display: block
+					padding-top: 0.6em
 	.project-previous
 		float: left	
 		line-height: 3em
+		@media (max-width: 991px)
+			line-height: 2em
+			// margin-right: 2em
+			margin-right: 0.5em
 		a 
 			&:before 
 				font-family: "FontAwesome"
 				content: "\f104"			
 				margin-right: 0.5em	
+				@media (max-width: 991px)
+					vertical-align: middle
+					line-height: 1
+					margin-right: 0
+					display: block
+					padding-top: 0.6em
 .mobile-wrapper 
-	padding-top: 3em			
+	padding-top: 3em	
+	@media (max-width: 991px)
+		padding-top: 0px		
 .hidden
 	z-index: -1
 	+opacity(0)
 	+transition(all 0.1s ease-in)	
+.hidden-tablet 
+	display: block
+	@media (min-width: 992px)
+		display: none
+.hidden-mobile
+	@media (max-width: 767px)
+		display: none		
+.zoom 
+	position: fixed
+	// right: 1em
+	right: 0.5em
+	top: 5em
+	// background-color: rgba(204, 32, 44, 0.6)
+	color: #fff
+	padding: 0.5em
+	border-radius: 100%		
+	a 
+		color: #fff
+		font-weight: 100
+		display: block
+		width: 1em
+		height: 1em
+		padding: 0
+		margin: 0
+		vertical-align: middle
+		padding: 1em
+		border: 1px solid #CC202C
+		border-radius: 100%
+		background-color: rgb(204, 32, 44)
+		.fa 
+			vertical-align: top
+			position: absolute
+			left: 1em
+			top: 1em
+.project-extra-list-mobile
+	// +make-row
+	@media (min-width: 992px)
+		display: none
+	.owl-controls
+		position: absolute
+		bottom: 1em
+		width: 100%	
+		.owl-prev 
+			float: left
+		.owl-next 
+			float: right
+		.owl-nav 
+			color: $primary		
+	.project-extra-item-wrap
+		padding: 0 $spacing/2
+	.project-extra-item
+		background-color: #fff
+		// width: 110px
+		float: left 
+		min-height: 120px
+		position: relative			
+		// border: 1px solid #fff
+		margin-right: 10px
+		margin-bottom: 7px
+		border-top: 2px solid #fff
+		width: 100%
+		span 
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			width: 100%
+			background-color: $primary
+			color: #fff
+			opacity: 0
+			text-align: center
+			font-size: 0.8em
+			padding: 0.2em	
+			font-weight: 300	
+	.project-extra-title					
+		// background-color: $primary
+		color: #000
+		padding: 0 0.5em
+		// position: absolute		 
+		text-align: center
+		font-size: 0.8em
+		padding-top: 10px		
+		line-height: 1 
+		// min-height: 3em	
+		width: 80px
+		text-overflow: ellipsis
+		overflow: hidden
+		white-space: nowrap
+		margin-bottom: 15px
+	.project-extra-image 			
+		// height: 120px
+		padding: 0px 10px
+		display: block
+		img 
+			margin: 0 auto
+			max-width: 100%	
+			width: auto
+			max-height: 66px	
+.modal.mainImageModal
+	background-color: rgba(0, 0, 0, 0.9)
+	.modal-content 
+		background-color: transparent 
+		border-radius: 0
+		margin-top: 2em
+	.modal-content 
+		margin-top: 5em
+	.modal-header 
+		border-radius: 0px
+		padding: 0
+	.modal-body 
+		border-radius: 0px		
+		padding: 0
+	.fa-times 
+		color: #fff
+		position: absolute
+		right: 10px
+		top: 10px
+		background-color: rgba(204, 32, 44, 1)
+		border-radius: 100%
+		width: 2em
+		height: 2em
+		vertical-align: middle
+		line-height: 2em
+		text-align: center
+#FormModal
+	background-color: rgba(0, 0, 0, 0.9)
+	.modal-content 
+		background-color: #fff 
+		border-radius: 0
+		margin-top: 2em
+	.modal-content 
+		margin-top: 5em	
+	.project-form
+		&.show 
+			position: relative
+		form 
+			padding: 1em 0px 3em
+			margin: 0px		
+		.form-group 
+			padding: 0px	
+	.modal-header 
+		border: none
+		padding: 0
+	button 
+		position: relative
+		right: auto 
+		top: 0
+		margin-top: $spacing
+	.fa-times 
+		display: block
+		padding: 1em			
+.thanks-wrap 
+	padding-top: 5em
+	min-height: 900px
+	background-color: #fff
