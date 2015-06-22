@@ -543,8 +543,9 @@ body
 	@media (min-width: 992px)
 		display: none
 .hidden-mobile
-	@media (max-width: 767px)
-		display: none		
+	display: none
+	@media (min-width: 768px)
+		display: block	
 .zoom 
 	position: fixed
 	// right: 1em
