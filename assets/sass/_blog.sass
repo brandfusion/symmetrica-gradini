@@ -1,89 +1,289 @@
 .article-page 
-	padding: 0px
-	font-size: 0.8em
-	+make-row
-	.inline
-		font-size: 0.8em
-		margin-bottom: 0.5em
-		color: #aaa
-		font-weight: 300
-		p
-			margin: 0 0.5em 0 0
-			display: inline
-		a
-			font-weight: 600
+  // padding: 0px
+  // max-width: 1170px
+  // padding: 0 $spacing
+  max-width: 100%
+  margin: 0 auto
+  // padding: 1em  
+  padding-left: 0rem
+  padding-top: 1rem
+  // font-size: 0.8rem
+  // @media (min-width: 768px)
+  //   padding-left: 5rem
+  // @media (min-width: 1400px)
+  //   font-size: 1rem
+  +clearfix
+  .inline
+    font-size: 0.8em
+    margin-bottom: 0.5em
+    color: #aaa
+    font-weight: 300
+    p 
+      margin: 0 0.5em 0 0
+      display: inline
+    a
+      font-weight: 600
+    img 
+      max-width: 100% !important 
+      height: auto !important 
 .category-header 
-	h1
-		border-bottom: 1px solid $accent
-		margin: 0.5em 0
-		font-size: 1em
-		padding-bottom: 0.5em
-		color: $accent
-		font-weight: 400
-		text-transform: uppercase
-		+box-shadow(0px 1px 1px #eee)
+  h1
+    border-bottom: 1px solid $accent
+    margin: 0.5em 0
+    font-size: 1em
+    padding-bottom: 0.5em
+    color: $accent
+    font-weight: 400
+    text-transform: uppercase
+    +box-shadow(0px 1px 1px #eee)
 .article
-	+make-md-column(8)	
-	margin-bottom: 1.5em
-	h2
-		margin-bottom: 0.2em
-		font-weight: 400
-		font-size: 2.2em
-		line-height: 1.2
-		@media (max-width:768px)
-			font-size: 1.8em
-		@media (max-width:480px)
-			font-size: 1.5em	
-	.date
-		font-size: 1em
-		margin: 0
-		&:before
-			font-family: "FontAwesome"
-			font-weight: 400
-			content: "\f017"
-			margin-right: 0.2em
-			color: #ccc	
-	.header
-		margin-bottom: 1em		
-.article-aside-list 	
-	+make-md-column(4)
-	.media
-		margin: 0 0 1em		
-	.media-object
-		width: 60px		
-	h4 	
-		+text-overflow()
-		font-weight: 700
-		text-transform: uppercase
-		a
-			display: inline
-	p
-		margin-bottom: 0
-	a
-		color: #333	
-		&:hover 
-			color: darken(adjust_hue($accent, 136), 11)
+  +make-md-column(8)  
+  margin-bottom: 1.5em
+  h2
+    margin-bottom: 0.2em 
+    font-weight: 400
+    font-size: 2.2em
+    line-height: 1.2
+    @media (max-width:768px)
+      font-size: 1.8em
+    @media (max-width:480px)
+      font-size: 1.5em  
+  .date
+    font-size: 1em
+    margin: 0
+    &:before
+      font-family: "FontAwesome"
+      font-weight: 400
+      content: "\f017"
+      margin-right: 0.2em
+      color: #ccc 
+  .header
+    margin-bottom: 1em    
+.article-aside-list   
+  +make-sm-column(3)  
+  font-size: 0.8em
+  margin-top: 2rem
+  .media
+    margin: 0 0 1em   
+  .media-object
+    width: 60px   
+  h4 
+    // width: 90%
+    // +text-overflow()
+    font-size: 1.4em
+    @media (max-width: 767px)
+      line-height: 2em
+      text-transform: uppercase
+    a
+      display: inline
+  p
+    margin-bottom: 0
+  a
+    color: #333 
+    display: block
+    line-height: 1.4  
+    @media (max-width: 767px)
+      line-height: 2em
+      font-size: 1.2em
+    &:hover 
+      color: $secondary
+  .side-categories, .side-tags
+    margin-bottom: 0.5em    
 .article-list
-	+make-md-column(8)
-	.media
-		margin-bottom: 1em
-		border-bottom: 1px solid #eee
-		padding-bottom: 1em
-		&:last-child
-			border: none
-	.media-object
-		width: 180px	
-		@media (max-width:768px)
-			width: 60px		
-	h2
-		font-weight: 400
-		@media (max-width:480px)
-			font-size: 1.2em	
-		a
-			color: #000
-			&:hover 
-				color: darken(adjust_hue($accent, 136), 11)
-	p
-		margin-bottom: 0.5em
-	.inline
-		margin-bottom: 0.2em
+  +make-sm-column(9)
+  padding-left: 0
+  margin-top: 2em
+  // @media (min-width: 768px)
+  //   padding-left: 3.75rem
+  // @media (min-width: 1280px)
+  //   padding-left: 4.5rem  
+  .page__header--blog
+    margin-bottom: 1rem  
+    padding-left: 0.5rem
+    color: $primary
+    background-color: #fff 
+    padding: 0 0.5em
+    line-height: 1.4
+    font-weight: 300
+    margin-top: 0
+  .media
+    margin-bottom: 1em
+    border-bottom: 1px solid #eee
+    padding-bottom: 1em
+    &:last-child
+      border: none
+  .media-object
+    width: 180px      
+  .media-left 
+    @media (max-width: 767px)
+      display: block
+      margin-bottom: 1rem  
+  h2
+    font-weight: 400
+    @media (max-width:480px)
+      font-size: 1.2em  
+    a
+      color: #000
+      &:hover 
+        color: darken(adjust_hue($accent, 136), 11)
+  .post-summary
+    font-size: 1em
+    font-weight: 300      
+    p
+      margin-bottom: 0.5rem
+  .inline
+    margin-bottom: 0.2em
+  .title 
+    a
+      font-size: 1.5em
+      font-weight: 300
+      color: #000
+      line-height: 1  
+  .post-date 
+    font-size: 0.8rem
+    margin-bottom: 0.2em  
+    @media (max-width: 767px)
+      margin-bottom: 0
+  .item 
+    margin-bottom: 1rem
+    padding-bottom: 1rem  
+    border-bottom: 2px solid #CC202C
+    background-color: rgb(255, 255, 255)
+    padding: 1em
+.blog-aside
+  +clearfix
+  font-size: 0.8em
+.categories, .tags
+  display: inline-block
+  p 
+    display: inline
+    &:last-child
+      span
+        display: none       
+  .categories 
+    padding-right: 0.5em
+    margin-right: 0.5em     
+.btn-read-more
+  .fa 
+    margin-left: 0.5em    
+.article-item
+  padding-left: 0
+  background-color: #fff
+  margin-top: 2em
+  padding: 1em
+  +make-sm-column(9)
+  // @media (min-width: 768px) and (max-width: 1240px)
+  //   padding-left: 4em
+  // @media (max-width: 767px)
+  //   padding-top: 2em      
+.last-article-list
+  @media (max-width: 767px)
+    font-size: initial
+    h5 
+      font-weight: 400
+.addthis_native_toolbox
+  max-width: 100%     
+.article-title  
+  font-size: 2.4em
+  font-weight: 300
+  color: #000
+  line-height: 1
+  margin-top: 0
+  margin-bottom: 0
+.article-post-date 
+  font-size: 0.8rem  
+.article-post-content
+  font-size: 1em
+  font-weight: 300
+  line-height: 1.4
+  img 
+    max-width: 100% !important 
+    height: auto !important
+  p 
+    margin-bottom: 0.5rem
+.article-post-image 
+  margin-bottom: 0.5rem    
+  // max-width: 500px
+  max-width: 100vw
+.sidebar-list
+  font-size: 1em
+  font-weight: 300
+  background-color: #fff
+  padding: 0.5rem
+  font-size: 1em
+  font-weight: 300
+  padding: 1em
+  background-color: #CC202C
+  color: #fff
+  border-radius: 0.5em
+
+  .box-heading
+    font-size: 1.5em
+    font-weight: 300
+    // border-bottom: 1px solid #aaa
+    margin-bottom: 0.2rem
+  .side-tags-container 
+    a 
+      display: inline-block
+      background-color: #A50C0C
+      color: #FFF
+      padding: 0 0.5em
+      border-radius: 0.2em
+      margin-bottom: 0.2em
+      padding: 0.3em 0.5em
+      &:hover 
+        background-color: #6B0101
+  .side-categories-container 
+    margin-bottom: 1em    
+    a 
+      display: inline-block
+      background-color: #A50C0C
+      // background-color: #FAD2D2
+      color: #FFF
+      padding: 0 0.5em
+      padding: 0.3em 0.5em
+      border-radius: 0.2em
+      margin-bottom: 0.2em  
+      &:hover 
+        background-color: #6B0101
+  .last-article-list  
+    // margin-bottom: 0.5rem    
+    h5 
+      font-size: inherit 
+      font-weight: 300
+      display: block
+      a 
+        color: inherit      
+        line-height: 1.6em    
+        width: 100% 
+        +text-overflow()    
+        &:hover 
+          color: #fff
+          text-decoration: underline
+        &:before 
+          font-family: "FontAwesome"
+          content: "\f105"
+          float: left
+          display: inline
+          color: #fff
+          margin-right: 0.5em      
+    // li 
+    //   border-bottom: 1px solid #eee 
+.article-list-page
+  font-size: 0.8rem
+  padding-top: 2em
+  +clearfix
+  @media (min-width: 1400px)
+    font-size: 1rem
+.pagination 
+  span, a 
+    width: 1em
+    text-align: center
+    @media (max-width: 767px)
+      width: 2em
+
+.blog-wrapper
+  background-image: url("../img/background-blog.jpg")
+  background-size: cover
+  min-height: 100vh
+   

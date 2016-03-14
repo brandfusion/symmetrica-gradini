@@ -4,4 +4,5 @@ css
 jade.resources/*.html
 .sass-cache
 prepros.cfg
+_temp
 *.html
